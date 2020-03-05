@@ -1,0 +1,45 @@
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <a class="navbar-brand" href="#">My profile </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/game']">Play Game <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="text" *ngIf="userAuthenticated">
+ 
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Pseudo</th>
+        <th scope="col">Mail</th>
+        <th scope="col">Nombre de partie gagner</th>
+        <th scope="col">Nombre de partie</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> {{userAuthenticated.id}}</td>
+        <td>{{userAuthenticated.name}}</td>
+        <td> {{userAuthenticated.username}}</td>
+        <td> {{userAuthenticated.email}}</td>
+        <td> 12</td>
+        <td> 42</td>
+         <td> <a class="navbar-brand" href="/update">Modifier mes infos</a> </td>
+    
+      </tr>
+     
+    </tbody>
+  </table>
+  </div>
+  

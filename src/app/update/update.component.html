@@ -1,0 +1,25 @@
+<h3>Update user</h3>
+<div style="width: 400px;">
+  <form class="form-signin text-center">
+    <div class="form-group">
+      <label for="name">Username</label>
+      <input type="text" class="form-control" id="username"  [(ngModel)]="userAuthenticated.username" name="username">
+    </div>
+
+    <div class="form-signin text-center">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name"  [(ngModel)]="userAuthenticated.name" name="name">
+    </div>
+
+    <div class="form-signin text-center">
+      <label for="name">Email</label>
+      <input type="text" class="form-control" id="email" [(ngModel)]="userAuthenticated.email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="name">Password</label>
+      <input type="password" class="form-control" id="password"  [(ngModel)]="password" name="password">
+    </div>
+
+    <button (click)=updateUserInformation() class="btn btn-success" type="button">Modifier mes infos</button>
+  </form>
+</div>
