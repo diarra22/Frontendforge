@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "morpion-app"
+  "defaultProject": "morpion-app",
+  "cli": {
+    "analytics": false
+  }
 }

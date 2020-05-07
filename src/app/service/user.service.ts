@@ -12,14 +12,14 @@ export class UserService {
   constructor(private httpService: HttpClient) { }
 
   public getUserAuthenticated(): Observable<User> { 
-    return this.httpService.get<User>(`http://localhost:8080/users/me`)
+    return this.httpService.get<User>(`http://localhost:9191/users/me`)
     .pipe( map(data => new User()
     .deserialize(data))); 
   }
 
   public updateUserInfos(username, name, email, password): Observable<User> {
     console.log("Appel service je suis là 1");
-    return this.httpService.put<User>('http://localhost:8080/users/update', 
+    return this.httpService.put<User>('http://localhost:9191/users/update', 
                             { name, email, username, password })
                             .pipe(map(data => new User()
                             .deserialize(data))); 
